@@ -1,0 +1,50 @@
+body {
+    background-color:  #dd7230;
+}
+
+h1, h2 {
+    color: black;
+    padding: 10px;
+    width: 98vw;
+    text-align: center;
+    background-color:  #f4c95d;
+
+}
+
+p {
+    font-size: larger;
+    text-align: center;
+}
+
+form {
+    justify-content: center;
+}
+
+h4 {text-align: center;
+
+}
+
+hr {
+    width: 90vw;
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f4c95d;
+}
+
+#random-btn {
+    justify-content: center;
+    border-radius: 50%;
+    display: block;
+    width: 200px;
+    height: 100px;
+    font-size: larger;
+}
+button:hover {
+    background-color: #F6921E;
+}
+
