@@ -1,4 +1,4 @@
-let dishChoices = []
+let dishChoices = ['DC']
 
 let globalId = 0
 
@@ -11,7 +11,9 @@ module.exports = {
             dishOption
         }
 
-        quoteList.push(newDish)
+        dishChoices.push(newDish)
+        console.log('new' + newDish)
+        console.log(dishChoices)
         res.status(200).send(dishChoices)
         globalId++
     
@@ -20,10 +22,24 @@ module.exports = {
 
 
     deleteDish : (req, res) => {
-        let index = dishChoices.findIndex(elem => elem.id === +req.params.id)
+        console.log("delete dish" + req.params.id)
+        let index = dishChoices.findIndex(elem => elem.id === +req.params.id) 
+        console.log("delete dish" + index)
         dishChoices.splice(index, 1)
+        console.log('delete dish' + dishChoices)
+        console.log("dd")
         res.status(200).send(dishChoices)
 
 
-    }
+    },
+
+    getRandomDish: (req, res) => {
+    
+        let randomIndex = Math.floor(Math.random() * dishChoices.length);
+        let randomDish = randomDish[randomIndex];
+        
+        res.status(200).send(randomDish);
+    },
+    
 }
+

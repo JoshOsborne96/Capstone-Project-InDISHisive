@@ -8,6 +8,7 @@ h1, h2 {
     width: 98vw;
     text-align: center;
     background-color:  #f4c95d;
+    font-style: italic;
 
 }
 
@@ -21,6 +22,7 @@ form {
 }
 
 h4 {text-align: center;
+    text-decoration: underline;
 
 }
 
@@ -47,4 +49,3 @@ hr {
 button:hover {
     background-color: #F6921E;
 }
-
