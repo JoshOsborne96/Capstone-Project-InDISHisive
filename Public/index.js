@@ -5,12 +5,15 @@ const dishList = document.querySelector('#dish-list')
 const baseURL = "http://localhost:5500/api"
 
 
-const dishesCallback = ({data: dishes}) => displayDishes (dishes)
-const errCallback = err => console.log(err.response.data)
+const dishesCallback = ({data: option}) => displayDishes (option)
+const errCallback = err => console.log(err)
 
 const postDish = body => axios.post(baseURL, body).then(dishesCallback).catch(errCallback)
 const deleteDish = id => axios.delete(`${baseURL}/${id}`).then(dishesCallback).catch(errCallback)
-const getRandomDish = () => axios.get("http://localhost:5500/api/randomDish/").then(res => {const data = res.data; alert(data)})
+const getRandomDish = () => {
+    axios.get("http://localhost:5500/api/random/")
+    .then(res => 
+        {const data = res.data; alert(data)})}
 
 function submitHandler(element) {
     element.preventDefault()
@@ -21,7 +24,9 @@ function submitHandler(element) {
         dishInput: dishInput.value
     }
 
-    dishItem(dishObj)
+    postDish(dishObj)
+
+    // dishItem(dishObj)
 
     dishInput.value = ""
 }
@@ -29,8 +34,6 @@ function submitHandler(element) {
 function dishItem (option) {
     const dishHolder = document.createElement('div')
     dishHolder.classList.add('dish-holder')
-
-console.log(option)
 
     dishHolder.innerHTML = 
     `<p id = "dish-option"> ${option.dishInput} </p>
@@ -40,10 +43,18 @@ console.log(option)
 }
 
 function displayDishes(arr) {
-    dishesContainer.innerHTML = ``
+    dishList.innerHTML = ``
     for (let i = 0; i < arr.length; i++) {
         dishItem(arr[i])
     }
+}
+
+function dishChoice (arr) {
+    const dishChoiceHolder = document.createElement('div')
+    dishChoiceHolder.classList.add('dish-choice-holder')
+
+    dishChoiceHolder.innerHTML = ''
+
 }
 
 form.addEventListener('submit', submitHandler)

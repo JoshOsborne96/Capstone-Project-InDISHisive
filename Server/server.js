@@ -13,7 +13,7 @@ const { postDish, deleteDish, getRandomDish } = require('./controller')
 
 app.post("/api/", postDish)
 app.delete("/api/:id", deleteDish)
-app.get("api/randomDish", getRandomDish)
+app.get("/api/random", getRandomDish)
 
 
 app.listen(5500, () => console.log("Server running on 5500"));
