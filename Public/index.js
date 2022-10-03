@@ -1,19 +1,19 @@
 const randomBtn = document.getElementById("random-btn")
 const form = document.querySelector('form')
 const dishList = document.querySelector('#dish-list')
+const choiceList = document.querySelector('#choice-list')
 
 const baseURL = "http://localhost:5500/api"
 
 
 const dishesCallback = ({data: option}) => displayDishes (option)
+// const choiceCallback = ({data: obj}) => DisplayChoice (obj)
 const errCallback = err => console.log(err)
 
 const postDish = body => axios.post(baseURL, body).then(dishesCallback).catch(errCallback)
 const deleteDish = id => axios.delete(`${baseURL}/${id}`).then(dishesCallback).catch(errCallback)
-const getRandomDish = () => {
-    axios.get("http://localhost:5500/api/random/")
-    .then(res => 
-        {const data = res.data; alert(data)})}
+const getRandomDish = () => axios.get("http://localhost:5500/api/random/").then(DisplayChoice).catch(errCallback)
+
 
 function submitHandler(element) {
     element.preventDefault()
@@ -26,8 +26,6 @@ function submitHandler(element) {
 
     postDish(dishObj)
 
-    // dishItem(dishObj)
-
     dishInput.value = ""
 }
 
@@ -37,9 +35,10 @@ function dishItem (option) {
 
     dishHolder.innerHTML = 
     `<p id = "dish-option"> ${option.dishInput} </p>
-    <button onclick="deleteDish(${option.id})">delete</button>`
+    <button id = "delete-button" onclick="deleteDish(${option.id})">delete</button>`
 
     dishList.appendChild(dishHolder)
+
 }
 
 function displayDishes(arr) {
@@ -47,16 +46,37 @@ function displayDishes(arr) {
     for (let i = 0; i < arr.length; i++) {
         dishItem(arr[i])
     }
-}
-
-function dishChoice (arr) {
-    const dishChoiceHolder = document.createElement('div')
-    dishChoiceHolder.classList.add('dish-choice-holder')
-
-    dishChoiceHolder.innerHTML = ''
 
 }
+
+
+//Random choice functions w/ delete
+
+function dishChoice (obj) {
+    const choiceHolder = document.createElement('div')
+    choiceHolder.classList.add('choice-holder')
+
+    choiceHolder.innerHTML = 
+    `<div>
+    <h3 id = "random-choice-header"> ${obj.dishInput} </h3>
+    <button id = "delete-button" onclick="deleteChoice()">delete</button>
+    </div>`
+
+    choiceList.appendChild(choiceHolder)
+
+}
+
+function deleteChoice () {
+    choiceList.innerHTML = ``
+}
+
+function DisplayChoice({data: obj}) {
+    choiceList.innerHTML = ``
+    dishChoice(obj)
+
+}
+
+
 
 form.addEventListener('submit', submitHandler)
-
 randomBtn.addEventListener('click', getRandomDish)

@@ -1,5 +1,26 @@
+
+ 
+@keyframes buttons {
+    0%   {background-color: #ad27ad; left:0px; top:0px;}
+    25%  {background-color: #26A9E0; left:200px; top:0px;}
+    50%  {background-color:#82f057; left:200px; top:200px;}
+    75%  {background-color: #e3f057; left:0px; top:200px;}
+    100% {background-color: #ad27ad; left:0px; top:0px;}
+  }
+
+  /* @keyframes buttons {
+    0%   {background-color: red; left:0px; top:0px;}
+    25%  {background-color: orange; left:200px; top:0px;}
+    50%  {background-color: yellow; left:200px; top:200px;}
+    75%  {background-color: #e3f057; left:0px; top:200px;}
+    100% {background-color: red; left:0px; top:0px;}
+  } */
+
 body {
-    background-color:  #dd7230;
+    background-color:lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1, h2 {
@@ -7,9 +28,18 @@ h1, h2 {
     padding: 10px;
     width: 98vw;
     text-align: center;
-    background-color:  #f4c95d;
     font-style: italic;
-
+    font-size:30px;
+    background: linear-gradient(45deg, #ad27ad, #26A9E0, #82f057, #e3f057);
+    /* background: linear-gradient(45deg, red, orange, yellow, #e3f057); */
+    background-size: 200%;
+    border-style:double;
+    border-radius: 0 15px 0 15px;
+    /* animation-name: buttons;
+    animation-duration: 20s;
+    animation-iteration-count: infinite; */
+    
+  
 }
 
 p {
@@ -26,26 +56,56 @@ h4 {text-align: center;
 
 }
 
-hr {
-    width: 90vw;
-    margin: 20px 0;
-}
 
 .container {
+    width: 225px;
+    margin: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #f4c95d;
-}
-
-#random-btn {
-    justify-content: center;
-    border-radius: 50%;
-    display: block;
-    width: 200px;
-    height: 100px;
+    flex-direction: column;
+    align-items: center; 
+    border-radius: 0 15px 0 15px;
+    position: relative;
+    background: white;
+    /* background: linear-gradient(45deg, red, orange, yellow, #e3f057); */
+    background: linear-gradient(45deg, #ad27ad, #26A9E0, #82f057, #e3f057);
+    background-size: 200%;
     font-size: larger;
 }
-button:hover {
-    background-color: #F6921E;
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dish-option {
+    display: flex;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#random-btn{
+    border-radius: 0 15px 0 15px;
+    width: 200px;
+    height: 50px;
+    font-size: larger;
+    animation-name: buttons;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+
+}
+#submit-btn {
+    border-radius: 0%;
+    animation-name: buttons;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+#delete-button {
+    background-color: white;
+    border-radius: 0 15px 0 15px;
 }
