@@ -38,4 +38,4 @@ app.get("/js", function(req, res) {
 const port = process.env.PORT || 5500
 console.log(path.join(__dirname, '../public/index.html'))
 
-app.listen(80, () => console.log(`Server running on ${port}`));
+app.listen(port, () => console.log(`Server running on ${port}`));
