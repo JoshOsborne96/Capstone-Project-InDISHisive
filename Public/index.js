@@ -3,7 +3,7 @@ const form = document.querySelector('form')
 const dishList = document.querySelector('#dish-list')
 const choiceList = document.querySelector('#choice-list')
 
-const baseURL = "http://localhost:5500/api"
+const baseURL = "https://in-dish-isive.herokuapp.com/api"
 
 
 const dishesCallback = ({data: option}) => displayDishes (option)
@@ -12,7 +12,7 @@ const errCallback = err => console.log(err)
 
 const postDish = body => axios.post(baseURL, body).then(dishesCallback).catch(errCallback)
 const deleteDish = id => axios.delete(`${baseURL}/${id}`).then(dishesCallback).catch(errCallback)
-const getRandomDish = () => axios.get("http://localhost:5500/api/random/").then(DisplayChoice).catch(errCallback)
+const getRandomDish = () => axios.get("https://in-dish-isive.herokuapp.com/api/random/").then(DisplayChoice).catch(errCallback)
 
 
 function submitHandler(element) {
