@@ -9,7 +9,7 @@ app.use(cors());
 
 app.use(express.json());
 
-const { postDish, deleteDish, getRandomDish } = require('../server/controller')
+const { postDish, deleteDish, getRandomDish } = require('./controller')
 
 //Local Endpoints
 
