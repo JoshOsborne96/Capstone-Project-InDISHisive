@@ -109,3 +109,10 @@ section {
     background-color: white;
     border-radius: 0 15px 0 15px;
 }
+
+footer {
+    width: 100vw;
+    margin: 200px;
+    display: flex;
+    justify-content:center;
+}

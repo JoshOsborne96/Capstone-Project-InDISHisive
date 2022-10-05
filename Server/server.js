@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path")
 
 const app = express();
 
@@ -9,11 +10,30 @@ app.use(express.json());
 
 const { postDish, deleteDish, getRandomDish } = require('./controller')
 
-//Endpoints
+//Local Endpoints
 
 app.post("/api/", postDish)
 app.delete("/api/:id", deleteDish)
 app.get("/api/random", getRandomDish)
 
+//Heroku Endpoints
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public'))
+})
 
-app.listen(5500, () => console.log("Server running on 5500"));
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/index.html'))
+})
+
+app.get("/styles", function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/index.js'))
+})
+
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/index.css'))
+})
+
+
+const port = process.env.PORT || 5500
+
+app.listen(port, () => console.log(`Server running on ${port}`));
