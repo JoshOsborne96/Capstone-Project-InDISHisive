@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InDISHisive</title>
+    <link rel="stylesheet" href="https://in-dish-isive.herokuapp.com/styles">
+</head>
+
+<h1>In-DISH-isive</h1>
+<h3>Can't decide where or what to eat? Let us make it easy for you.</h3>
+
+<details>
+    <summary>How it works</summary>
+    <ol>
+        <li>Enter any number of food options into the submit box.</li>
+        <li>Click on the randomize button to recieve a random food choice.</li>
+        <li>Relax and enjoy your meal that was picked stress-free!</li>
+      </ol>
+
+
+
+</details>
+
+<body>
+<h2>Prospective Dishes</h2>
+
+<section>
+     <h4>Dish List</h4>
+
+    <div id = "dish-list" class="container"></div>
+</section>
+
+<form>
+
+    <input type="text" id="dish-input" placeholder="Enter dish here">
+    <button id="submit-btn" class="button">Submit</button>
+
+</form>
+
+
+<section>
+    <h2>The DISH-ision</h2>
+    <div id="choice-list" class="container"></div>
+</section>
+
+
+
+
+
+<button id="random-btn" class="button">RANDOMIZE</button>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://in-dish-isive.herokuapp.com/js"></script>
+</body>
+
+<section>
+
+    <footer>InDISHisive. Created by Josh Osborne</footer>
+
+</section>
+</html>
