@@ -45,14 +45,14 @@ function dishItem (option) {
 
 function displayDishes(arr) {
     dishList.innerHTML = ``
-    for (let i = 0; i < arr.length; i++) {
-        dishItem(arr[i])
-    }
-
     if(arr.length === 0) {
         return alert ("Please add a valid dish choice")
     }
     
+    for (let i = 0; i < arr.length; i++) {
+        dishItem(arr[i])
+    }
+
 }
 
 
