@@ -53,8 +53,9 @@ function displayDishes(arr) {
         else {
             return dishItem(arr[i])
         }
-        console.log(arr[i])
     }
+    
+    console.log(arr[i].dishInput)
     
     dishList.innerHTML = ``
     
