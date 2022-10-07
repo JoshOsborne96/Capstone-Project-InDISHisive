@@ -49,13 +49,13 @@ function displayDishes(arr) {
     
     for (let i = 0; i < arr.length; i++) {
         dishItem(arr[i])
+        console.log(arr[i])
+        if(arr[i] === undefined) {
+            return alert ("Please add a valid dish choice")
+        }
     }
 
-    console.log(arr[i])
     
-    if(arr[i] === undefined) {
-        return alert ("Please add a valid dish choice")
-    }
 }
 
 
