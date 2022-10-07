@@ -47,7 +47,7 @@ function dishItem (option) {
 function displayDishes(arr) {
     
     for (let i = 0; i < arr.length; i++) {
-        if(arr[i][0] === "") {
+        if(arr[i] === "") {
             console.log(arr[i])
             return alert ("Please enter a valid dish choice")
         }
