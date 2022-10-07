@@ -51,7 +51,7 @@ function displayDishes(arr) {
         dishItem(arr[i])
     }
     
-    if(arr.contains(undefined)) {
+    if(arr[i] === undefined) {
         return alert ("Please add a valid dish choice")
     }
 }
