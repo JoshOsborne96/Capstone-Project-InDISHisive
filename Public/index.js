@@ -29,6 +29,10 @@ function submitHandler(element) {
     postDish(dishObj)
     
     dishInput.value = ""
+    
+    if(arr.length === 0) {
+        return alert ("Please add a valid dish choice")
+    }
 }
 
 function dishItem (option) {
@@ -45,9 +49,6 @@ function dishItem (option) {
 
 function displayDishes(arr) {
     dishList.innerHTML = ``
-    if(arr.length === 0) {
-        return alert ("Please add a valid dish choice")
-    }
     
     for (let i = 0; i < arr.length; i++) {
         dishItem(arr[i])
