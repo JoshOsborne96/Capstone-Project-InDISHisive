@@ -45,12 +45,13 @@ function dishItem (option) {
 }
 
 function displayDishes(arr) {
+    if(arr[i].dishInput === "") {
+        return alert ("Please enter a valid dish choice")
+    }
+    
     for (let i = 0; i < arr.length; i++) {
         dishItem(arr[i])
         console.log(arr[i])
-        if(arr[i].dishInput === "") {
-            return alert ("Please enter a valid dish choice")
-        }
     }
     
     dishList.innerHTML = ``
