@@ -51,9 +51,9 @@ function displayDishes(arr) {
         dishItem(arr[i])
     }
     
-    // if(arr.length === 0) {
-    //     return alert ("Please add a valid dish choice")
-    // }
+    if(arr.contains(undefined)) {
+        return alert ("Please add a valid dish choice")
+    }
 }
 
 
@@ -79,9 +79,9 @@ function deleteChoice () {
 
 function DisplayChoice({data: obj}) {
     if(obj[0] === undefined) {
-        return alert ("Please add a valid dish choice")
+        return alert ("Please add dish options first")
     }
-    
+
     choiceList.innerHTML = ``
     dishChoice(obj)
     
