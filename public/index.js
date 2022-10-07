@@ -14,6 +14,10 @@ const postDish = body => axios.post(baseURL, body).then(dishesCallback).catch(er
 const deleteDish = id => axios.delete(`${baseURL}/${id}`).then(dishesCallback).catch(errCallback)
 const getRandomDish = () => axios.get("https://in-dish-isive.herokuapp.com/api/random/").then(DisplayChoice).catch(errCallback)
 
+function resetApp () {
+    axios.delete(baseURL + '/reset').then(console.log('app reset'))
+}
+
 
 function submitHandler(element) {
     element.preventDefault()
@@ -80,3 +84,4 @@ function DisplayChoice({data: obj}) {
 
 form.addEventListener('submit', submitHandler)
 randomBtn.addEventListener('click', getRandomDish)
+resetApp()

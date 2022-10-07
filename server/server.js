@@ -9,13 +9,14 @@ app.use(cors());
 
 app.use(express.json());
 
-const { postDish, deleteDish, getRandomDish } = require('./controller')
+const { postDish, deleteDish, getRandomDish, resetApp } = require('./controller')
 
 //Local Endpoints
 
 app.post("/api/", postDish)
 app.delete("/api/:id", deleteDish)
 app.get("/api/random", getRandomDish)
+app.delete("/api/reset", resetApp)
 
 //Heroku Endpoints
 // app.get('/', function(req, res) {
