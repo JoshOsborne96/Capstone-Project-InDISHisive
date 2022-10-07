@@ -1,4 +1,3 @@
-
 const randomBtn = document.getElementById("random-btn")
 const form = document.querySelector('form')
 const dishList = document.querySelector('#dish-list')
@@ -48,10 +47,10 @@ function dishItem (option) {
 function displayDishes(arr) {
     
     for (let i = 0; i < arr.length; i++) {
-        if(arr[i].dishInput === "") {
-            return alert ("Please enter a valid dish choice")
-        }
-        else {dishItem(arr[i])}
+         {dishItem(arr[i])}
+        // if(arr[i].dishInput === "") {
+        //     return alert ("Please enter a valid dish choice")
+        // }
         console.log(arr[i])
     }
     
