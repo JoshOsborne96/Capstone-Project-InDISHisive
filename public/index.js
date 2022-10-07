@@ -48,6 +48,7 @@ function displayDishes(arr) {
     
     for (let i = 0; i < arr.length; i++) {
         if(arr[i].dishInput === "") {
+            console.log(arr[i].dishInput)
             return alert ("Please enter a valid dish choice")
         }
         else {
@@ -55,8 +56,7 @@ function displayDishes(arr) {
         }
     }
     
-    console.log(arr[i].dishInput)
-    
+
     dishList.innerHTML = ``
     
 }
