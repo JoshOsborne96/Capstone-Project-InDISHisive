@@ -78,12 +78,13 @@ function deleteChoice () {
 }
 
 function DisplayChoice({data: obj}) {
-    choiceList.innerHTML = ``
-    dishChoice(obj)
-    
     if(obj[0] === undefined) {
         return alert ("Please add a valid dish choice")
     }
+    
+    choiceList.innerHTML = ``
+    dishChoice(obj)
+    
 }
 
 function resetApp () {
