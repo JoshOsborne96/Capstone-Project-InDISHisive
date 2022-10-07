@@ -1,5 +1,3 @@
-const express = require("express")
-
 const randomBtn = document.getElementById("random-btn")
 const form = document.querySelector('form')
 const dishList = document.querySelector('#dish-list')
