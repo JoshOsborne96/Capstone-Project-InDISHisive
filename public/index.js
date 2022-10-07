@@ -1,3 +1,5 @@
+const e = require("express")
+
 const randomBtn = document.getElementById("random-btn")
 const form = document.querySelector('form')
 const dishList = document.querySelector('#dish-list')
@@ -45,12 +47,12 @@ function dishItem (option) {
 }
 
 function displayDishes(arr) {
-    if(arr[i].dishInput === "") {
-        return alert ("Please enter a valid dish choice")
-    }
     
     for (let i = 0; i < arr.length; i++) {
-        dishItem(arr[i])
+        if(arr[i].dishInput === "") {
+            return alert ("Please enter a valid dish choice")
+        }
+        else {dishItem(arr[i])}
         console.log(arr[i])
     }
     
