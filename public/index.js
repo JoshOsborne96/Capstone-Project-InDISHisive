@@ -50,7 +50,9 @@ function displayDishes(arr) {
         if(arr[i].dishInput === "") {
             return alert ("Please enter a valid dish choice")
         }
-        else if (dishItem(arr[i]))
+        else {
+            return dishItem(arr[i])
+        }
         console.log(arr[i])
     }
     
