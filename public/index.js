@@ -73,6 +73,7 @@ function deleteChoice () {
 }
 
 function DisplayChoice({data: obj}) {
+    console.log(obj)
     console.log(obj[0])
     if(obj[0] === undefined) {
         return alert ("Please add dish options first")
