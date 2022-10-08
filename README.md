@@ -15,12 +15,15 @@ The idea for this project arose from an all too-relatable situation that many of
     * CORS
     * PATH
 
-### Installing
-This program can be access via GitHub using the repository link below:
+## Installation/Usage
+* Use `git clone` to access locally
 
+### Starting your Express Server:
+* Install neccessary node packages with `npm i`
+* Install dependecies with `npm express cors path`
 
 
 ## Author
 Josh Osborne
-@JoshOzOsborne
+www.linkedin.com/in/josh-osborne
 
