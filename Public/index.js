@@ -47,11 +47,7 @@ function dishItem (option) {
 function displayDishes(arr) {
     dishList.innerHTML = ``
     for (let i = 0; i < arr.length; i++) {
-        if(arr[i].dishInput === ""){
-            return alert("please enter a valid dish option")
-        }
-        else (dishItem(arr[i]))
-        console.log(arr[i].dishInput)
+         dishItem(arr[i])
     }
 }
 
@@ -77,9 +73,6 @@ function deleteChoice () {
 }
 
 function DisplayChoice({data: obj}) {
-    if(obj.dishInput === "") {
-        return alert ("Please add dish options first")
-    }
 
     choiceList.innerHTML = ``
     dishChoice(obj)
