@@ -44,22 +44,12 @@ function dishItem (option) {
 }
 
 function displayDishes(arr) {
+
     dishList.innerHTML = ``
 
-if(arr[0].dishInput === ""){
-    alert("Please enter a valid dish option")
-
-}
-
-else {
     for (let i = 0; i < arr.length; i++) {
          dishItem(arr[i])
     }
-
-}
-
-console.log(arr[0].dishInput)
-console.log("got here")
 }
 
 
