@@ -7,7 +7,6 @@ const baseURL = "https://in-dish-isive.herokuapp.com/api"
 
 
 const dishesCallback = ({data: option}) => displayDishes (option)
-// const choiceCallback = ({data: obj}) => DisplayChoice (obj)
 const errCallback = err => console.log(err)
 
 const postDish = body => axios.post(baseURL, body).then(dishesCallback).catch(errCallback)
@@ -46,9 +45,20 @@ function dishItem (option) {
 
 function displayDishes(arr) {
     dishList.innerHTML = ``
+
+if(arr.dishInput === ""){
+    alert("Please enter a valid dish option")
+
+}
+
+else {
     for (let i = 0; i < arr.length; i++) {
          dishItem(arr[i])
     }
+
+}
+
+console.log(arr.dishInput)
 }
 
 
