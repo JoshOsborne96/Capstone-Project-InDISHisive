@@ -25,5 +25,6 @@ The idea for this project arose from an all too-relatable situation that many of
 
 ## Author
 Josh Osborne
+
 www.linkedin.com/in/josh-osborne
 
