@@ -58,7 +58,7 @@ else {
 
 }
 
-console.log(arr[i].dishInput)
+console.log(arr[0].dishInput)
 console.log("got here")
 }
 
