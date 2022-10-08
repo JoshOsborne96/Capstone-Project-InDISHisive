@@ -46,7 +46,7 @@ function dishItem (option) {
 function displayDishes(arr) {
     dishList.innerHTML = ``
 
-if(arr.dishInput === ""){
+if(arr[i].dishInput === ""){
     alert("Please enter a valid dish option")
 
 }
@@ -58,7 +58,7 @@ else {
 
 }
 
-console.log(arr.dishInput)
+console.log(arr[i].dishInput)
 }
 
 
