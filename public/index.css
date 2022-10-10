@@ -115,7 +115,7 @@ section {
 }
 
 #submit-btn:hover{
-    border: #82f057;
+    background-color: #82f057;
 }
 
 #delete-button {
@@ -124,7 +124,7 @@ section {
 }
 
 #delete-button:hover{
-    border: #82f057;
+    background-color: #82f057;
 }
 
 footer {
