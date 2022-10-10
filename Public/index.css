@@ -96,8 +96,17 @@ section {
     animation-name: buttons;
     animation-duration: 20s;
     animation-iteration-count: infinite;
-
+    margin: 1rem;
+    transition: all 0.5s ease;
+    transform: scale(1);
 }
+
+#random-btn:hover{
+    cursor: pointer;
+    transform: scale(1.25);
+    filter: brightness(120%);
+}
+
 #submit-btn {
     border-radius: 0%;
     animation-name: buttons;
@@ -105,9 +114,17 @@ section {
     animation-iteration-count: infinite;
 }
 
+#submit-btn:hover{
+    border: #82f057;
+}
+
 #delete-button {
     background-color: white;
     border-radius: 0 15px 0 15px;
+}
+
+#delete-button:hover{
+    border: #82f057;
 }
 
 footer {
