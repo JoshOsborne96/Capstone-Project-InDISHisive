@@ -8,14 +8,6 @@
     100% {background-color: #ad27ad; left:0px; top:0px;}
   }
 
-  /* @keyframes buttons {
-    0%   {background-color: red; left:0px; top:0px;}
-    25%  {background-color: orange; left:200px; top:0px;}
-    50%  {background-color: yellow; left:200px; top:200px;}
-    75%  {background-color: #e3f057; left:0px; top:200px;}
-    100% {background-color: red; left:0px; top:0px;}
-  } */
-
 body {
     background-color:lightblue;
     display: flex;
@@ -31,15 +23,9 @@ h1, h2 {
     font-style: italic;
     font-size:30px;
     background: linear-gradient(45deg, #ad27ad, #26A9E0, #82f057, #e3f057);
-    /* background: linear-gradient(45deg, red, orange, yellow, #e3f057); */
     background-size: 200%;
     border-style:double;
     border-radius: 0 15px 0 15px;
-    /* animation-name: buttons;
-    animation-duration: 20s;
-    animation-iteration-count: infinite; */
-    
-  
 }
 
 p {
@@ -66,7 +52,6 @@ h4 {text-align: center;
     border-radius: 0 15px 0 15px;
     position: relative;
     background: white;
-    /* background: linear-gradient(45deg, red, orange, yellow, #e3f057); */
     background: linear-gradient(45deg, #ad27ad, #26A9E0, #82f057, #e3f057);
     background-size: 200%;
     font-size: larger;
@@ -112,10 +97,16 @@ section {
     animation-name: buttons;
     animation-duration: 20s;
     animation-iteration-count: infinite;
+    margin: 1rem;
+    transition: all 0.5s ease;
+    transform: scale(1);
 }
 
 #submit-btn:hover{
-    background-color: #82f057;
+    cursor: pointer;
+    transform: scale(1.25);
+    filter: brightness(120%);
+
 }
 
 #delete-button {
